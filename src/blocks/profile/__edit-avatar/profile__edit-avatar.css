@@ -1,3 +1,12 @@
+.profile__edit-avatar {
+  width: 120px;
+  height: 120px;
+}
+
+.profile__edit-avatar:hover {
+  cursor: pointer;
+}
+
 .profile__edit-avatar:hover {
   background-image: url(../../../images/pencil.svg);
   background-repeat: no-repeat;

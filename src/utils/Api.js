@@ -37,7 +37,7 @@ class Api {
       .then(this._handleResponse)
   }
 
-  updatingUserData(data) {
+  setUserInfo(data) {
     return fetch(`${this.baseUrl}/users/me`, {
       method: "PATCH",
       headers: this.headers,
@@ -46,7 +46,7 @@ class Api {
       .then(this._handleResponse)
   }
 
-  changeAvatar(dataUrl) {
+  setUserAvatar(dataUrl) {
     return fetch(`${this.baseUrl}/users/me/avatar`, {
       method: "PATCH",
       headers: this.headers,

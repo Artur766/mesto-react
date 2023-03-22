@@ -13,7 +13,7 @@ function Main(props) {
       <section className="profile">
         <div className="profile__wrapper">
           <div className="profile__edit-avatar" onClick={props.onEditAvatar}>
-            <img className="profile__avatar" src={currentUser.avatar} alt="аватарка" />
+            <img className="profile__avatar" src={currentUser.avatar} alt="Аватар" />
           </div>
           <div className="profile__info">
             <div className="profile__container">
