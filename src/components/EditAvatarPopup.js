@@ -5,7 +5,6 @@ function EditAvatarPopup(props) {
 
   const avatarInputRef = React.useRef();
 
-
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -15,15 +14,12 @@ function EditAvatarPopup(props) {
     });
 
     avatarInputRef.current.value = "";
-
   }
 
   function resetInput() {
     props.onClose();
     avatarInputRef.current.value = "";
   }
-
-
 
   return (
     <PopupWithForm

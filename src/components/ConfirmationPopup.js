@@ -3,9 +3,14 @@ import PopupWithForm from "./PopupWithForm";
 
 function ConfirmationPopup(props) {
 
+  function hanldeSubmit(e) {
+    e.preventDefault();
+    props.onDeleteCard(props.card);
+  }
 
   return (
     <PopupWithForm
+      onSubmit={hanldeSubmit}
       title="Вы уверены?"
       name="confirmation"
       buttonName="Да"

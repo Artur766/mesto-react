@@ -10,9 +10,9 @@
   top: 20px;
   right: 20px;
   cursor: pointer;
-  /* display: none; */
 }
 
 .element__basket:hover {
   opacity: 0.6;
+
 }

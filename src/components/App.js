@@ -3,7 +3,6 @@ import "../pages/index.css";
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
-import PopupWithForm from "./PopupWithForm";
 import ImagePopup from "./ImagePopup";
 import React from "react";
 import api from "../utils/Api";
@@ -13,7 +12,6 @@ import EditProfilePopup from "./EditProfilePopup";
 import EditAvatarPopup from "./EditAvatarPopup";
 import AddPlacePopup from "./AddPlacePopup";
 import ConfirmationPopup from "./ConfirmationPopup";
-
 
 function App() {
 
@@ -25,6 +23,7 @@ function App() {
   const [currentUser, setCurrentUser] = React.useState({});
   const [cards, setCards] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(false);
+  const [card, setCard] = React.useState({});
 
   //обновляем данные пользователя и карточек
   React.useEffect(() => {
@@ -65,17 +64,6 @@ function App() {
     api.changeLikeCardStatus(card._id, !isLiked)
       .then((newCard) => {
         setCards(cards.map(c => c._id === card._id ? newCard : c));
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }
-
-  //удаление карточки
-  function handleCardDelete(card) {
-    api.deleteCard(card._id)
-      .then(() => {
-        setCards(cards.filter(c => c._id !== card._id));
       })
       .catch((err) => {
         console.log(err);
@@ -129,14 +117,27 @@ function App() {
     setIsAddPlacePopupOpen(!isAddPlacePopupOpen);
   }
 
-  function handleConfirmationClick() {
+  function handleConfirmationClick(card) {
     setIsConfirmationPopupOpen(!isConfirmationPopupOpen);
+    setCard(card);
+  }
+
+  //удаление карточки
+  function handleCardDelete(card) {
+
+    api.deleteCard(card._id)
+      .then(() => {
+        setCards(cards.filter(c => c._id !== card._id));
+        closeAllPopups();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   function handleCardClick(selectedCard) {
     setSelectedCard(selectedCard);
   }
-
 
   function closeAllPopups() {
     setIsAddPlacePopupOpen(false);
@@ -157,7 +158,7 @@ function App() {
               onAddPlace={handleEditAddPlaceClick}
               onEditAvatar={handleEditAvatarClick}
               onCardClick={handleCardClick}
-              onCardDelete={handleCardDelete}
+              onCardDelete={handleConfirmationClick}
               onCardLike={handleCardLike}
             />
           </CardContext.Provider>
@@ -181,7 +182,12 @@ function App() {
           onAddPlace={handleAddPlaceSubmit}
           buttonName={isLoading ? "Создание..." : "Созать"}
         />
-        <ConfirmationPopup isOpen={isConfirmationPopupOpen} onClose={closeAllPopups} />
+        <ConfirmationPopup
+          isOpen={isConfirmationPopupOpen}
+          onClose={closeAllPopups}
+          onDeleteCard={handleCardDelete}
+          card={card}
+        />
         <ImagePopup card={selectedCard} onClose={closeAllPopups} />
       </CurrentUserContext.Provider>
     </>
