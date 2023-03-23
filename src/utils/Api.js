@@ -81,6 +81,5 @@ class Api {
   }
 }
 
-const api = new Api(apiConfig);
+export const api = new Api(apiConfig);
 
-export default api;

@@ -1,13 +1,12 @@
-
-import "../pages/index.css";
+import "../pages/index.css"
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 import ImagePopup from "./ImagePopup";
 import React from "react";
-import api from "../utils/api";
-import { CurrentUserContext } from "./contexts/CurrentUserContext";
-import { CardContext } from "./contexts/CardContext";
+import { api } from "../utils/api";
+import { CurrentUserContext } from "../contexts/CurrentUserContext";
+import { CardContext } from "../contexts/CardContext";
 import EditProfilePopup from "./EditProfilePopup";
 import EditAvatarPopup from "./EditAvatarPopup";
 import AddPlacePopup from "./AddPlacePopup";
