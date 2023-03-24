@@ -3,7 +3,7 @@ import Main from "./Main";
 import Footer from "./Footer";
 import ImagePopup from "./ImagePopup";
 import React from "react";
-// import api from "../utils/api"
+import api from "../utils/api"
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import { CardContext } from "../contexts/CardContext";
 import EditProfilePopup from "./EditProfilePopup";
