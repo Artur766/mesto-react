@@ -23,7 +23,6 @@ function App() {
   const [isLoading, setIsLoading] = React.useState(false);
   const [card, setCard] = React.useState({});
 
-  //обновляем данные пользователя и карточек
   React.useEffect(() => {
 
     const promises = [api.getInitialCards(), api.getUserInformation()];
@@ -104,6 +103,7 @@ function App() {
 
   function handleEditAvatarClick() {
     setIsEditAvatarPopupOpen(!isEditAvatarPopupOpen);
+
   }
 
   function handleEditProfileClick() {

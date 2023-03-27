@@ -10,12 +10,14 @@ function ConfirmationPopup(props) {
 
   return (
     <PopupWithForm
+      disabledButton={true}
       onSubmit={hanldeSubmit}
       title="Вы уверены?"
       name="confirmation"
       buttonName="Да"
       isOpen={props.isOpen}
       onClose={props.onClose}
+      buttonState={false}
     />
   )
 }

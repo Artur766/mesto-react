@@ -1,5 +1,3 @@
-import { validationConfig } from "./utils";
-
 export default class FormValidator {
   constructor(config, formSelector) {
     this._config = config;
@@ -74,7 +72,6 @@ export default class FormValidator {
     //проходимся по каждому инпуту и навешиваем метод хайд и очищаем значения инпутов 
     this._inputList.forEach((inputElement) => {
       this._hideInputError(inputElement);
-      inputElement.value = "";
     })
 
   }
@@ -85,4 +82,3 @@ export default class FormValidator {
     this._buttonElement.disabled = true;
   }
 }
-
