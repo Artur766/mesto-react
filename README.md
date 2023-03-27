@@ -1,7 +1,4 @@
-# mesto-react
- https://artur766.github.io/mesto-react/
-
- <h1 align="center">Учебный frontend-проект: "Место"</h1>
+<h1 align="center">Учебный frontend-проект: "Место"</h1>
 
 
   <ol>
@@ -9,17 +6,13 @@
     <li><a href="#technologies">Стек технологий</a></li>
     <li><a href="#installation">Установка и запуск приложения в локальном репозитории</a></li>
     <li><a href="#establishing">Процесс создания</a></li>
-    <ul>
-      <li><a href="#tasks-and-problems">Основные задачи, проблемы и их решение</a></li>
-    </ul>
     <li><a href="#functionality">Функционал</a></li>
-    <li><a href="#enhancement">Планы по улучшению</a></li>
   </ol>
 </details>
 </a>
 
 <a name="project-description"><h2>1. Описание проекта</h2></a>
-Данная проектная работа выполнена в рамках образовательной программы <a href="https://practicum.yandex.ru/">Яндекс Практикума</a>. Проект представляет собой портирование на "React" адаптивного приложения с профилем пользователя и фотокарточками, <a href="https://artur766.github.io/mesto-react/">изначально написанного</a> на нативных технологиях: HTML5, CSS3 и JavaScript. Он похож по своему типу и функционалу на популярные соцсети: Instagram, Facebook, VKontakte, - расширенному <a href="https://github.com/elrouss/react-mesto-auth">в следующей учебной работе</a> добавлением формы регистрации и авторизации пользователей
+Данная проектная работа выполнена в рамках образовательной программы <a href="https://practicum.yandex.ru/">Яндекс Практикума</a>. Проект представляет собой портирование на "React" адаптивного приложения с профилем пользователя и фотокарточками, <a href="https://artur766.github.io/mesto/">изначально написанного</a> на нативных технологиях: HTML5, CSS3 и JavaScript. Он похож по своему типу и функционалу на популярные соцсети: Instagram, Facebook, VKontakte, - расширенному <a href="https://github.com/elrouss/react-mesto-auth">в следующей учебной работе</a> добавлением формы регистрации и авторизации пользователей
 
 <h4>Ссылка на макеты:
 <br>
@@ -29,7 +22,7 @@ https://www.figma.com/file/kRVLKwYG3d1HGLvh7JFWRT/JavaScript.-Sprint-6?node-id=0
 https://www.figma.com/file/PSdQFRHoxXJFs2FH8IXViF/JavaScript-9-sprint?node-id=0%3A1
 <br>
 <br>
-Ссылка на проект: https://elrouss.github.io/mesto-react/</h4>
+Ссылка на проект:https://artur766.github.io/mesto-react/</h4>
 
 <a name="technologies"><h2>2. Стек технологий</h2></a>
 <span>
